@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Yuvita</title>
 
-    <!--CSS External-->
-    <link rel="stylesheet" href="css/style.css">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -15,19 +13,111 @@
 <body>
 
     <!-- Main Header -->
-    <header>
-        <div class="bg-rose-200 rounded-full h-[75px] w-[75px]"></div>
-                
+    <header class="flex items-center justify-between p-[20px] bg-white shadow-md">
+        <!-- Logo -->
+        <img src="https://i.pinimg.com/736x/6e/4b/42/6e4b423b0d54aa238278ab5f91e59642.jpg" alt="Yuvita Logo" class="bg-rose-200 rounded-full h-[75px] w-[75px] object-cover main-logo">
+
+
+
+        <nav>
+        <ul class="flex gap-[10px]">
+            <li><a href="#home-page"
+                 class="text-gray-500 border py-[3px] px-[8px] rounded-[8px] hover:text-gray-400">Home</a></li>
+            <li><a href="#our-profile" 
+                class="text-gray-500 border py-[3px] px-[8px] rounded-[8px] hover:text-gray-400">Our Profile</a></li>
+            <li><a href="#portfolio" 
+                class="text-gray-500 border py-[3px] px-[8px] rounded-[8px] hover:text-gray-400">Portfolio</a></li>
+            <li><a href="#message-us" 
+                class="text-gray-500 border py-[3px] px-[8px] rounded-[8px] hover:text-gray-400">Message Us</a></li>
+        </ul>
+        </nav>
     </header>
+
+    <hr />
 
     <!-- Main Content -->
      <main>
+        <!--Home-->
+        <section id="home-page" class="h-[500px] bg-gray-100">
+    <div class="flex items-center justify-center h-full">
+                <h1 class="text-4xl font-bold text-gray-700">Welcome <span id="user-greeting"></span> to my portfolio!</h1>
+        </div>    
+        </section>
 
+        <hr/>
+
+
+
+        <!--Our Profile-->
+        <section id="our-profile" class="items-center h-[400px] bg-gray-100">
+           <header>
+            <h1 class="text-4xl font-bold text-gray-700">Our Profile</h1>
+           </header>
+    
+            <p class="text-center text-gray-600">We are a team of passionate individuals dedicated to delivering high-quality work.</p>
+        </section>
+
+        <hr/>
+
+
+
+        <!--Portfolio-->
+        <section id="portfolio" class="items-center h-[400px] bg-gray-100">
+             <header>
+            <h1 class="text-4xl font-bold text-gray-700">Portfolio</h1>
+           </header>
+
+            <p class="text-gray-600">We are a team of passionate individuals dedicated to delivering high-quality work.</p>
+        </section>
+
+        <hr/>
+
+
+
+        <!--Message Us-->
+        <section id="message-us" class="h-[500px] bg-gray-100">
+             <header>
+            <h1 class="text-4xl font-bold text-gray-700">Message Us</h1>
+           </header>
+
+           <form>
+            <div class="flex flex-col gap-4 max-w-md mx-auto mt-8">
+                <div class="flex items-center gap-2">
+                    <label for="name" class="block text-gray-700 w-24">Nama:</label>
+                    <input type="text" id="name" name="name" class="px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-rose-200 w-60" />
+                </div>
+                <div class="flex items-center gap-2">
+                    <label for="email" class="block text-gray-700 w-24">Email:</label>
+                    <input type="email" id="email" name="email" class="px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-rose-200 w-60" />
+                </div>
+                <div class="flex items-center gap-2">
+                    <label for="gender" class="block text-gray-700 w-24">Jenis Kelamin:</label>
+                    <select id="gender" name="gender" class="px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-rose-200 w-60">
+                        <option value="">Pilih</option>
+                        <option value="pria">Pria</option>
+                        <option value="wanita">Wanita</option>
+                    </select>
+                </div>
+                <div class="flex items-center gap-2">
+                    <label for="message" class="block text-gray-700 w-24">Pesan:</label>
+                    <textarea id="message" name="message" rows="3" class="px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-rose-200 w-60 resize-none"></textarea>
+                </div>
+                <button type="button" onclick="sendmessage()" class="flex items-center gap-2 bg-gradient-to-r from-rose-400 to-pink-400 text-white px-6 py-2 rounded-full shadow-lg hover:from-rose-500 hover:to-pink-500 transition-all duration-200 w-fit self-end font-semibold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Kirim
+                </button>
+            </div>
+           </form>
+
+
+        </section>
      </main>
 
      <!--footer-->
-     <footer>
-
+     <footer class="text-center">
+         <span>&copy; 2025 Portfolio Yuvita</span>
      </footer>
 
     <!--JavaScript External-->
